@@ -54,9 +54,9 @@
         function game(result) {
             if (result.includes('Win')) {
                     playerScore = ++playerScore;
-                } else {
-                    computerScore = ++computerScore;
-                }
+            } else if (result.includes('Lose')){
+                    computerScore = ++computerScore;                
+            }
             document.getElementById("Score").textContent = result;
             document.getElementById("Result").textContent = `Player Score : ${playerScore} | Computer Score : ${computerScore}`
             if (playerScore === 5 || computerScore === 5) {
